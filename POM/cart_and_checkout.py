@@ -13,7 +13,7 @@ class CartAndCheckout:
         # to cart
         self.first_name_input = page.locator("[data-test=\"firstName\"]")  # first name input
         self.last_name_input = page.locator("[data-test=\"lastName\"]")  # last name input
-        self.postal_code_input = page.locator("[data-test=\"postalCode\"]")  # postal code input
+        self.postal_code_input = page.locator("[data-test=\"postalCode\"]")  # postal code inputt
         self.general_error_form = page.locator("[data-test=\"error\"]")  # general error on the checkout form
         self.first_name_error = page.locator("[data-test=\"checkout-info-container\"] div").\
             filter(has_text="Error: First Name is required").nth(2)  # error first name is required on the checkout

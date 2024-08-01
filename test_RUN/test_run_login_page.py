@@ -5,10 +5,8 @@ from POM.side_menu import SideMenu
 
 
 @pytest.mark.regression
-@pytest.mark.parametrize("user, passwd", [("standard_user", "secret_sauce"),
-                                                 ("fake_user", "fake_passwd"),
-                                             ("standard_user", ""),
-                                          ("", "secret_sauce")])
+@pytest.mark.parametrize("user", ["standard_user", "fake_user", "standard_user", ""])
+@pytest.mark.parametrize("passwd", ["secret_sauce", "fake_passwd", "", "secret_sauce"])
 def test_logging_in_parametrized(setup_browser, user, passwd) -> None:
     page = setup_browser
     login_page = LoginPage(page)

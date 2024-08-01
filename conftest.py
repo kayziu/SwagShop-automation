@@ -21,5 +21,6 @@ def logging_in(setup_browser) -> None:
     login_page = LoginPage(page)
     login_page.username_box.fill(username)
     login_page.password_box.fill(passwd)
+    login_page.login_button.click()
 
     yield page
