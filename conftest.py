@@ -2,7 +2,7 @@ import pytest
 from POM.login_page import LoginPage
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope='session')
 def setup_browser(page):
     # browser = playwright.chromium.launch(headless=False)
     # context = browser.new_context()
