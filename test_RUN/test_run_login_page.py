@@ -19,13 +19,13 @@ def test_logging_in_parametrized(setup_browser, user, passwd) -> None:
     login_page.password_box.fill(passwd)
     login_page.login_button.click()
 
-    if user != "standard_user" and user != "" and passwd != "secret_sauce" and passwd != "":
+    if user != "standard_user" and user != "" and passwd != os.environ['PASSWORD'] and passwd != "":
         expect(login_page.username_and_passwd_error).to_be_visible()
     elif user != "" and passwd == "":
         expect(login_page.passwd_error).to_be_visible()
     elif user == "" and passwd != "":
         expect(login_page.username_error).to_be_visible()
-    elif user == "standard_user" and passwd == "secret_sauce":
+    elif user == "standard_user" and passwd == os.environ['PASSWORD']:
         expect(side_menu.open_menu).to_be_visible()
 
 
