@@ -1,14 +1,16 @@
+import os
+
 import pytest
 from playwright.sync_api import expect
 
-import utils.credentials
+# import utils.credentials
 from POM.login_page import LoginPage
 from POM.side_menu import SideMenu
 
 
 @pytest.mark.regression
 @pytest.mark.parametrize("user", ["standard_user", "fake_user", "standard_user", ""])
-@pytest.mark.parametrize("passwd", [utils.credentials.PASSWORD, "fake_passwd", "", utils.credentials.PASSWORD])
+@pytest.mark.parametrize("passwd", [os.environ['PASSWORD'], "fake_passwd", "", os.environ['PASSWORD']])
 def test_logging_in_parametrized(setup_browser, user, passwd) -> None:
     page = setup_browser
     login_page = LoginPage(page)
