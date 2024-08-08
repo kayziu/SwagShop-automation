@@ -2,7 +2,7 @@ import pytest
 from POM.login_page import LoginPage
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def setup_browser(page):
     # browser = playwright.chromium.launch(headless=False)
     # context = browser.new_context()
@@ -13,7 +13,7 @@ def setup_browser(page):
     yield page
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture
 def logging_in(setup_browser) -> None:
     username = 'standard_user'
     passwd = 'secret_sauce'
