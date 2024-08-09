@@ -1,7 +1,12 @@
 import pytest
 from POM.login_page import LoginPage
+import os
 
-
+try:
+    PASSWORD = os.environ['PASSWORD']
+except KeyError:
+    import utils.credentials
+    PASSWORD = utils.credentials.PASSWORD
 @pytest.fixture
 def setup_browser(page):
     # browser = playwright.chromium.launch(headless=False)
@@ -16,7 +21,7 @@ def setup_browser(page):
 @pytest.fixture
 def logging_in(setup_browser) -> None:
     username = 'standard_user'
-    passwd = 'secret_sauce'
+    passwd = PASSWORD
     page = setup_browser
     login_page = LoginPage(page)
     login_page.username_box.fill(username)
