@@ -1,0 +1,4 @@
+/venv/
+/.idea.
+/utils/credentials.py
+*.env
