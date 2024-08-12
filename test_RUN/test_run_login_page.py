@@ -6,6 +6,7 @@ from POM.side_menu import SideMenu
 
 PASSWORD = os.environ['PASSWORD']
 
+# Use if shared locally
 # try:
 #     PASSWORD = os.environ['PASSWORD']
 # except KeyError:
