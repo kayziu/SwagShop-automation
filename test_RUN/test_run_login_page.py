@@ -1,18 +1,16 @@
 import os
-
 import pytest
 from playwright.sync_api import expect
-
-import utils.credentials
-# import utils.credentials
 from POM.login_page import LoginPage
 from POM.side_menu import SideMenu
 
-try:
-    PASSWORD = os.environ['PASSWORD']
-except KeyError:
-    import utils.credentials
-    PASSWORD = utils.credentials.PASSWORD
+PASSWORD = os.environ['PASSWORD']
+
+# try:
+#     PASSWORD = os.environ['PASSWORD']
+# except KeyError:
+#     import utils.credentials
+#     PASSWORD = utils.credentials.PASSWORD
 
 
 @pytest.mark.regression
