@@ -15,6 +15,7 @@ PASSWORD = os.environ['PASSWORD']
 
 
 @pytest.mark.regression
+@pytest.fixture(scope="session")
 @pytest.mark.parametrize("user", ["standard_user", "fake_user", "standard_user", ""])
 @pytest.mark.parametrize("passwd", [PASSWORD, "fake_passwd", "", PASSWORD])
 def test_logging_in_parametrized(setup_browser, user, passwd) -> None:
