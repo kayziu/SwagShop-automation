@@ -1,8 +1,8 @@
 import os
 import pytest
 from playwright.sync_api import expect
-from POM.login_page import LoginPage
-from POM.side_menu import SideMenu
+from src.pages.login_page import LoginPage
+from src.pages.side_menu import SideMenu
 
 PASSWORD = os.environ['PASSWORD']
 

@@ -1,12 +1,13 @@
 import pytest
-from POM.login_page import LoginPage
+from src.pages.login_page import LoginPage
 import os
 
 try:
     PASSWORD = os.environ['PASSWORD']
 except KeyError:
-    import utils.credentials
-    PASSWORD = utils.credentials.PASSWORD
+    from src import utils
+
+    PASSWORD = src.utils.credentials.PASSWORD
 
 
 @pytest.fixture(scope="session")

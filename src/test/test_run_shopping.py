@@ -1,9 +1,7 @@
-import time
-
 import pytest
 from playwright.sync_api import expect
-from POM.shop_overview import ShopInventory
-from POM.cart_and_checkout import CartAndCheckout
+from src.pages.shop_overview import ShopInventory
+from src.pages.cart_and_checkout import CartAndCheckout
 
 
 def wait_and_add_to_cart(inventory):
