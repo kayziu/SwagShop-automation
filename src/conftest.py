@@ -1,7 +1,6 @@
 import pytest
 from src.pages.login_page import LoginPage
 import os
-from src.utils import credentials
 
 try:
     PASSWORD = os.environ['PASSWORD']
