@@ -1,13 +1,14 @@
 import pytest
 from src.pages.login_page import LoginPage
 import os
+import credentials
 
 try:
     PASSWORD = os.environ['PASSWORD']
 except KeyError:
     from src import utils
 
-    PASSWORD = src.utils.credentials.PASSWORD
+    PASSWORD = credentials.PASSWORD
 
 
 @pytest.fixture(scope="session")
