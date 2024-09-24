@@ -8,7 +8,7 @@ try:
 except KeyError:
     from src import utils
 
-    PASSWORD = src.utils.credentials.PASSWORD
+    PASSWORD = utils.credentials.PASSWORD
 
 
 # def test_visual_shop_overview(logging_in, assert_snapshot) -> None:
