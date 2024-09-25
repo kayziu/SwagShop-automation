@@ -1,13 +1,18 @@
-## My ecommerce tests
-Automated tests for an online shop. The framework uses Playwright/Pytest Framework with Python to test core 
+## My ecommerce automation project
+
+Automated tests for an online shop. 
+
+The framework uses Playwright/Pytest Framework with Python to test core 
 functionalities like login, checkout and payment.
 
-Automation includes report generation and visual testing.
+Automation includes report generation, visual testing 
+and uses GitHub Actions CI/CD pipeline.
 
 ### Requirements
 - Python 3.9+
 - Playwright
 - pytest
+#### For all the remaining requirements please see requirements.txt file
 
 ### Plugins
 Tests are using the following plugins:
@@ -18,3 +23,21 @@ Tests are using the following plugins:
 - **pixelmatch**: A pixel-level image comparison library.
 - **pytest-reporter**: Generate pytest reports with templates
 - **pytest-xdist**: pytest dist plugin for distributed testing, most importantly across multiple CPUs
+
+To install Plugins use:
+```bash
+pip install python-dotenv pip install pytest-dotenv pip install pytest-playwright
+pip install pytest-playwright-visual python -m pip install pixelmatch 
+pip install pytest-reporter pip install pytest-xdist
+```
+
+### Installation
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/kayziu/SwagShop-automation
+cd SwagShop
+pip install -r requirements.txt
+```
+
+
+
