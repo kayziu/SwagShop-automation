@@ -18,7 +18,7 @@ except KeyError:
 #     assert_snapshot(page.screenshot())
 
 
-def test_visual_shop_overview(page, assert_snapshot) -> None:
+def test_visual_shop_overview(page) -> None:
     page.goto("https://www.saucedemo.com/")
     page.wait_for_load_state("networkidle")
 
@@ -31,4 +31,4 @@ def test_visual_shop_overview(page, assert_snapshot) -> None:
     inventory = ShopInventory(page)
     # inventory.item_1.click()    # added for failure test
     expect(inventory.shopping_cart).to_be_visible()
-    ## assert_snapshot(page.screenshot(full_page=True))
+    # assert_snapshot(page.screenshot(full_page=True))
