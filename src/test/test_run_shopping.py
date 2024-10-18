@@ -56,6 +56,7 @@ def test_buy_2_in_item_details_and_checkout (logging_in) -> None:
 
 
 @pytest.mark.xfail(reason='Known issue - checkout button is enabled with empty cart')
+# Logging in, adding an item, removing the item, checking if the checkout button is active.
 def test_buy_item_and_remove_and_try_to_continue (logging_in) -> None:
     page = logging_in
     shop_inventory = ShopInventory(page)
